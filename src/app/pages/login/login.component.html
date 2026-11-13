@@ -1,0 +1,24 @@
+<div class="login-page">
+  <div class="decor decor-top" aria-hidden="true"></div><div class="decor decor-bottom" aria-hidden="true"></div>
+  <section class="login-content">
+    <div class="eyebrow"><span>✦</span> TU PRÓXIMO DESTINO EMPIEZA AQUÍ</div>
+    <h1>El mundo te espera.<span>Inicia tu aventura.</span></h1>
+    <p class="hero-description">Descubre nuevas experiencias y organiza tus próximas escapadas en un solo lugar.</p>
+    <div class="login-card" id="login">
+      <div class="card-topline">✦ &nbsp; PORTAL DE VIAJEROS</div>
+      <h2>Bienvenido de nuevo</h2>
+      <p class="card-description">Accede a tu cuenta de Horizonte Travel.</p>
+      @if (registroExitoso) {<div class="success-box" role="status">Cuenta creada correctamente. Inicia sesión con tus credenciales.</div>}
+      <form (ngSubmit)="aceptar()" novalidate>
+        <label for="usuario">Usuario</label>
+        <div class="input-control"><span aria-hidden="true">♙</span><input id="usuario" name="usuario" type="text" [(ngModel)]="usuario" placeholder="Escribe tu usuario" autocomplete="username"/></div>
+        <label for="clave">Contraseña</label>
+        <div class="input-control"><span aria-hidden="true">♧</span><input id="clave" name="clave" [type]="mostrarClave ? 'text' : 'password'" [(ngModel)]="clave" placeholder="Escribe tu contraseña" autocomplete="current-password"/><button type="button" class="toggle-password" (click)="mostrarClave = !mostrarClave" [attr.aria-label]="mostrarClave ? 'Ocultar contraseña' : 'Mostrar contraseña'">{{ mostrarClave ? 'Ocultar' : 'Ver' }}</button></div>
+        <button class="accept-button" type="submit">Aceptar <span aria-hidden="true">→</span></button>
+        @if (mensaje) {<div class="error-box" role="alert">{{ mensaje }}</div>}
+      </form>
+      <p class="register-prompt">¿Aún no tienes cuenta? <a routerLink="/registro">Regístrate gratis</a></p>
+      <div class="card-footer">♧ &nbsp; Área de acceso · Demostración académica</div>
+    </div>
+  </section>
+</div>

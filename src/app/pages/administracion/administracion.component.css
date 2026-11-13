@@ -1,0 +1,1 @@
+.feature-row { display:flex; gap:12px; align-items:center; padding:11px; background:#f6fafc; border-radius:10px; }.feature-row>span { color:#258eb0; font-size:20px; font-weight:800; }.feature-row strong { display:block; color:#31586e; font-size:13px; }.feature-row small { display:block; color:#8397a4; font-size:11px; margin-top:4px; }

@@ -1,0 +1,26 @@
+<div class="dashboard-page">
+  <div class="page-container">
+    <section class="welcome-hero">
+      <div class="welcome-content">
+        <span class="hero-chip">✦ &nbsp; PANEL DEL VIAJERO</span>
+        <h1>¡Bienvenido, {{ auth.nombreAutenticado() }}!</h1>
+        <p>Tu próximo viaje comienza aquí. Descubre destinos, gestiona reservas y explora todos los servicios de Horizonte Travel.</p>
+        <div class="welcome-actions"><a class="hero-button" routerLink="/catalogo">Explorar destinos <span>→</span></a><a class="hero-secondary" routerLink="/reservas">Ver mis reservas</a></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="mountain back"></div><div class="mountain front"></div><div class="water"></div><span class="flight">✈</span><span class="art-label">NUEVAS EXPERIENCIAS</span></div>
+    </section>
+    <div class="success-strip" role="status"><span class="success-icon">✓</span><span><strong>Acceso concedido.</strong> Sesión iniciada correctamente. Bienvenido al sistema Horizonte Travel.</span></div>
+    <div class="dashboard-section-head"><div><p class="kicker">SERVICIOS DISPONIBLES</p><h2 class="section-title">Nuestros módulos</h2></div><span class="badge-soft">5 módulos del proyecto</span></div>
+    <section class="module-grid" aria-label="Módulos de Horizonte Travel">
+      <a class="module-card" routerLink="/catalogo"><span class="module-icon">🧭</span><h3>Destinos y paquetes</h3><p>Explora destinos nacionales, conoce paquetes turísticos y filtra tus preferencias.</p><span class="module-link">Explorar catálogo →</span></a>
+      <a class="module-card" routerLink="/reservas"><span class="module-icon">🗓️</span><h3>Reservas e itinerarios</h3><p>Consulta tus solicitudes y realiza nuevas reservas de demostración.</p><span class="module-link">Gestionar reservas →</span></a>
+      <a class="module-card" routerLink="/pagos"><span class="module-icon">💳</span><h3>Pagos y facturación</h3><p>Revisa el diseño del historial de pagos, comprobantes y estados.</p><span class="module-link">Ver pagos →</span></a>
+      <a class="module-card" routerLink="/administracion"><span class="module-icon">📊</span><h3>Administración</h3><p>Visualiza indicadores de gestión y un resumen operativo del sistema.</p><span class="module-link">Abrir panel →</span></a>
+      <a class="module-card" routerLink="/soporte"><span class="module-icon">💬</span><h3>Soporte y reseñas</h3><p>Envía una consulta, consulta preguntas frecuentes y comparte opiniones.</p><span class="module-link">Ir a soporte →</span></a>
+    </section>
+    <div class="bottom-grid">
+      <section class="panel"><div class="panel-head"><div><p class="kicker">PRÓXIMAS AVENTURAS</p><h2 class="section-title">Destinos destacados</h2></div><a class="sub-link" routerLink="/catalogo">Ver todos →</a></div><div class="featured-row"><div class="destination-mini"><span class="mini-icon">🐢</span><div><strong>Islas Galápagos</strong><small>Naturaleza · Desde $790</small></div></div><div class="destination-mini"><span class="mini-icon blue">⛰️</span><div><strong>Baños de Agua Santa</strong><small>Aventura · Desde $145</small></div></div></div></section>
+      <section class="panel"><p class="kicker">RESUMEN PERSONAL</p><h2 class="section-title">Tus reservas</h2><p class="summary-count">{{ datos.reservas().length }} <span>reservas de ejemplo</span></p><p class="muted">Los datos son ilustrativos y se gestionan localmente para esta entrega.</p><a class="sub-link" routerLink="/reservas">Consultar detalle →</a></section>
+    </div>
+  </div>
+</div>

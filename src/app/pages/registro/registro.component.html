@@ -1,0 +1,43 @@
+<div class="registro-page">
+  <section class="registro-layout">
+    <div class="registro-intro">
+      <span class="eyebrow">✦ &nbsp; HORIZONTE TRAVEL</span>
+      <h1>Tu próxima aventura <span>empieza aquí.</span></h1>
+      <p>Crea tu cuenta de viajero para explorar destinos, solicitar reservas y gestionar tus viajes en un solo lugar.</p>
+      <div class="intro-benefits">
+        <div><span>✓</span> Encuentra destinos y paquetes</div>
+        <div><span>✓</span> Organiza tus itinerarios</div>
+        <div><span>✓</span> Consulta el estado de tus reservas</div>
+      </div>
+    </div>
+    <div class="registro-card">
+      <div class="card-topline">✦ &nbsp; CREAR CUENTA</div>
+      <h2>Regístrate gratis</h2>
+      <p class="card-description">Completa tus datos para comenzar a viajar con nosotros.</p>
+      <form (ngSubmit)="registrar()" novalidate>
+        <label for="nombre-registro">Nombre completo</label>
+        <input id="nombre-registro" name="nombre" type="text" [(ngModel)]="nombre" placeholder="Ej.: María Pérez" autocomplete="name" maxlength="60" required />
+
+        <label for="usuario-registro">Nombre de usuario</label>
+        <input id="usuario-registro" name="usuario" type="text" [(ngModel)]="usuario" placeholder="Ej.: maria123" autocomplete="username" maxlength="20" required />
+        <span class="help-text">De 3 a 20 caracteres, sin espacios.</span>
+
+        <label for="clave-registro">Contraseña</label>
+        <div class="password-group">
+          <input id="clave-registro" name="clave" [type]="mostrarClave ? 'text' : 'password'" [(ngModel)]="clave" placeholder="Mínimo 8 caracteres" autocomplete="new-password" required minlength="8" />
+          <button type="button" (click)="mostrarClave = !mostrarClave" [attr.aria-label]="mostrarClave ? 'Ocultar contraseñas' : 'Mostrar contraseñas'">{{ mostrarClave ? 'Ocultar' : 'Ver' }}</button>
+        </div>
+
+        <label for="confirmar-clave">Confirmar contraseña</label>
+        <input id="confirmar-clave" name="confirmarClave" [type]="mostrarClave ? 'text' : 'password'" [(ngModel)]="confirmarClave" placeholder="Repite tu contraseña" autocomplete="new-password" required />
+
+        <button class="submit-button" type="submit" [disabled]="guardando">{{ guardando ? 'Creando cuenta…' : 'Crear cuenta' }} <span aria-hidden="true">→</span></button>
+        @if (mensaje) {
+          <div [class.success-box]="exito" [class.error-box]="!exito" role="alert">{{ mensaje }}</div>
+        }
+      </form>
+      <p class="login-prompt">¿Ya tienes cuenta? <a routerLink="/login">Iniciar sesión</a></p>
+      <p class="storage-note">Demostración académica: las cuentas se guardan solo en este navegador, no en un servidor.</p>
+    </div>
+  </section>
+</div>

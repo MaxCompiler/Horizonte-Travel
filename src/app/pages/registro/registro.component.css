@@ -1,0 +1,30 @@
+.registro-page{min-height:calc(100vh - 144px);background:radial-gradient(ellipse at 4% 15%,#e5f4fc 0,transparent 36%),linear-gradient(130deg,#f4fbff,#eaf4fa);display:flex;align-items:center;padding:48px 22px;}
+.registro-layout{width:100%;max-width:1050px;display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center;margin:0 auto;}
+.registro-intro{padding:0 10px 40px 0;}
+.eyebrow{display:inline-block;color:#1979a9;background:#e2f1fa;font-size:11px;font-weight:800;letter-spacing:1.5px;padding:10px 15px;border-radius:40px;}
+h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(36px,4.2vw,56px);line-height:1.14;letter-spacing:-2px;color:#143e5e;margin:25px 0 20px;}
+h1 span{display:block;color:#238abb;}
+.registro-intro p{color:#628098;font-size:15px;line-height:1.8;max-width:450px;}
+.intro-benefits{display:grid;gap:15px;margin-top:35px;color:#345873;font-size:14px;font-weight:700;}
+.intro-benefits span{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#dff4ed;color:#17805f;margin-right:10px;}
+.registro-card{background:white;padding:33px 38px 27px;border:1px solid #dfeaf2;border-radius:22px;box-shadow:0 23px 64px rgba(28,85,122,.11);}
+.card-topline{font-size:10px;color:#2583b0;letter-spacing:1.8px;font-weight:800;margin-bottom:13px;}
+h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:27px;letter-spacing:-.7px;margin:0;color:#153e5e;}
+.card-description{color:#718b9e;font-size:13px;margin:8px 0 23px;}
+form{display:flex;flex-direction:column;}
+label{font-size:12.5px;font-weight:800;color:#31516c;margin-bottom:7px;}
+input{height:46px;width:100%;border:1px solid #d9e6ee;background:#f9fcfe;color:#1c4666;padding:0 13px;border-radius:9px;outline:0;margin-bottom:17px;font-size:13px;}
+input:focus{border-color:#479bc6;box-shadow:0 0 0 3px rgba(63,161,212,.13);}
+input::placeholder{color:#99afbd;}
+.help-text{color:#8ca2b1;font-size:11px;margin-top:-12px;margin-bottom:16px;}
+.password-group{position:relative;display:flex;align-items:center;}
+.password-group input{padding-right:75px;}
+.password-group button{position:absolute;top:11px;right:10px;border:0;background:none;color:#227bab;font-size:12px;font-weight:800;}
+.submit-button{width:100%;border:0;border-radius:10px;background:linear-gradient(100deg,#176b9e,#258cba);color:white;height:49px;font-size:13px;font-weight:800;margin-top:7px;display:flex;justify-content:center;align-items:center;gap:12px;}
+.submit-button:disabled{opacity:.7;cursor:wait;}
+.login-prompt{text-align:center;color:#7790a2;font-size:13px;margin:21px 0 14px;}
+.login-prompt a{font-weight:800;color:#187bad;text-decoration:none;}
+.storage-note{border-top:1px solid #e7edf2;padding-top:15px;text-align:center;color:#8da1af;line-height:1.6;font-size:11px;margin:0;}
+.error-box,.success-box{margin-top:13px;border:1px solid #f5bdc1;background:#fff0f1;color:#a4303a;padding:11px 13px;border-radius:9px;font-size:12.5px;font-weight:700;}
+.success-box{border-color:#b5decf;background:#ecf9f2;color:#207b51;}
+@media(max-width:800px){.registro-layout{grid-template-columns:1fr;gap:25px;max-width:520px;}.registro-intro{padding:0;text-align:center;}.registro-intro p{margin:0 auto;}.intro-benefits{display:none;}h1{font-size:35px;margin:18px 0 12px;}.registro-page{padding:35px 16px;}.registro-card{padding:27px 23px;}}

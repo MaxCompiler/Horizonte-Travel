@@ -1,0 +1,9 @@
+<div class="page-container"><a class="back-link" routerLink="/inicio">← Volver al inicio</a>
+  <div class="page-head"><div><p class="kicker">MÓDULO 01 · CATÁLOGO</p><h1 class="page-title">Explora nuevos destinos</h1><p class="page-subtitle">Conoce paquetes turísticos en Ecuador y encuentra experiencias según tus intereses.</p></div><span class="badge-soft">6 destinos de ejemplo</span></div>
+  <section class="panel filters" aria-label="Filtros de destinos"><div><label class="field-label" for="buscar-destino">Buscar destino</label><input class="field-input" id="buscar-destino" [(ngModel)]="busqueda" placeholder="Ej.: Galápagos o Cuenca"/></div><div><label class="field-label" for="categoria">Tipo de experiencia</label><select id="categoria" class="field-input" [(ngModel)]="categoria"><option>Todos</option><option>Naturaleza</option><option>Aventura</option><option>Cultura</option><option>Playa</option></select></div></section>
+  <section class="destinations-grid" aria-label="Destinos encontrados">
+    @for (destino of destinosFiltrados; track destino.id) {
+      <article class="destination-card"><div class="destination-art" [class]="'destination-art ' + destino.fondo"><span>{{ destino.emoji }}</span><span class="art-tag">{{ destino.tipo }}</span></div><div class="destination-body"><span class="location">⌖ &nbsp; {{ destino.provincia }}, Ecuador</span><h2>{{ destino.nombre }}</h2><p>{{ destino.descripcion }}</p><div class="destination-bottom"><div><small>DESDE</small><strong>${{ destino.precio }}</strong><small>por persona</small></div><button class="btn-primary" type="button" (click)="irAReservar(destino.nombre)">Reservar →</button></div></div></article>
+    } @empty { <div class="panel empty-state">No hay destinos que coincidan con la búsqueda. Prueba otros filtros.</div> }
+  </section><p class="demo-note">Los precios y paquetes mostrados son datos ficticios utilizados únicamente para el prototipo académico.</p>
+</div>

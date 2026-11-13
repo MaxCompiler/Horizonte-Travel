@@ -1,0 +1,37 @@
+<div class="page-shell">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" [routerLink]="auth.estaAutenticado() ? '/inicio' : '/login'" aria-label="Horizonte Travel, ir al inicio">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#176B9E"/><path d="M10 29C18 31.8 29 29.5 39 18.8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2.5 5"/><path d="M17.1 17.5L31.7 12.8L29.5 18.7L34.7 23.3L31.9 25L25.3 21.4L20.1 25.2L19.7 20L14.5 19.3L17.1 17.5Z" fill="#FFFFFF"/></svg>
+        </span>
+        <span class="brand-text"><strong>Horizonte</strong><span>TRAVEL</span></span>
+      </a>
+      <nav class="header-actions" aria-label="Navegación principal">
+        @if (auth.estaAutenticado()) {
+          <a class="nav-simple" routerLink="/inicio" routerLinkActive="active">Inicio</a>
+          <span class="user-pill" aria-label="Usuario autenticado"><span class="user-avatar">{{ (auth.nombreAutenticado() || 'U').charAt(0) }}</span><span class="user-label">{{ auth.nombreAutenticado() }}</span></span>
+          <button class="nav-login logout" type="button" (click)="cerrarSesion()">Cerrar sesión <span aria-hidden="true">↗</span></button>
+        } @else {
+          <button class="nav-about" type="button" (click)="alternarAcercaDe()" [attr.aria-expanded]="mostrarAcercaDe" aria-controls="detalle-empresa">Acerca de</button>
+          <a class="nav-register" routerLink="/registro">Registrarse</a>
+          <a class="nav-login" routerLink="/login">Iniciar sesión <span aria-hidden="true">→</span></a>
+        }
+      </nav>
+    </div>
+    @if (mostrarAcercaDe && !auth.estaAutenticado()) {
+      <aside class="about-strip" id="detalle-empresa">
+        <strong>Acerca de Horizonte Travel:</strong> propuesta académica para explorar destinos, organizar reservas, gestionar pagos y acompañar a los viajeros.
+      </aside>
+    }
+  </header>
+
+  <main class="main-content"><router-outlet /></main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Horizonte Travel. Todos los derechos reservados.</span>
+      <span>Proyecto académico · Universidad de Guayaquil · Grupo 7</span>
+    </div>
+  </footer>
+</div>

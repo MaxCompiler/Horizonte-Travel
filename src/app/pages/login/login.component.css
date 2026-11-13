@@ -1,0 +1,17 @@
+.login-page { min-height:calc(100vh - 144px); position:relative; overflow:hidden; background:radial-gradient(ellipse at 8% 50%,rgba(213,234,248,.85),transparent 34%),radial-gradient(ellipse at 91% 40%,rgba(226,237,247,.92),transparent 38%),linear-gradient(180deg,#f7fbff,#eff7fc); }
+.decor { position:absolute; pointer-events:none; border-radius:50%; }
+.decor-top { width:370px;height:370px;border:62px solid rgba(163,205,229,.14);right:-135px;top:35px; }
+.decor-bottom{width:360px;height:360px;border:56px solid rgba(158,198,222,.12);left:-160px;bottom:-155px;}
+.login-content{position:relative;z-index:1;margin:auto;max-width:780px;padding:43px 20px 46px;text-align:center;}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;font-size:10px;letter-spacing:1.6px;font-weight:800;background:#e7f2f9;border-radius:99px;padding:9px 15px;color:#2279ad;}
+.eyebrow span{color:#eca56b;}
+h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(30px,3.1vw,45px);font-weight:800;letter-spacing:-1.6px;line-height:1.22;color:#153d5b;margin:15px 0 9px;}h1 span{display:block;color:#238cbd;}
+.hero-description{font-size:14px;color:#607b91;margin:0 0 23px;}
+.login-card{max-width:450px;margin:auto;background:#fff;padding:27px 35px 23px;text-align:left;border:1px solid #e1ecf4;border-radius:20px;box-shadow:0 21px 60px rgba(27,85,119,.105);}
+.card-topline{color:#2680a9;font-size:10px;letter-spacing:1.8px;font-weight:800;margin-bottom:13px;}h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:24px;color:#183d5a;margin:0;letter-spacing:-.7px;}.card-description{font-size:12.5px;color:#7990a1;margin:8px 0 20px;}form{display:flex;flex-direction:column;}label{font-size:12.5px;font-weight:800;color:#304f68;margin:0 0 8px;}.input-control{height:50px;display:flex;align-items:center;border:1px solid #dde8f0;border-radius:9px;background:#f9fbfd;margin-bottom:18px;padding:0 13px;gap:11px;}.input-control:focus-within{border-color:#469bcb;box-shadow:0 0 0 3px rgba(63,161,212,.13);}.input-control>span{font-size:21px;color:#97afc1;}.input-control input{width:100%;min-width:0;border:0;outline:0;background:transparent;font-size:13px;color:#193e5a;}.input-control input::placeholder{color:#9aaebc;}.toggle-password{background:transparent;border:0;color:#257cac;font-size:11px;font-weight:800;white-space:nowrap;}.accept-button{height:49px;background:linear-gradient(100deg,#176c9e,#238cbb);border:0;border-radius:9px;color:white;font-weight:800;display:flex;align-items:center;justify-content:center;gap:12px;margin:2px 0 18px;}.accept-button:hover{filter:brightness(.93);}.error-box{border:1px solid #ffced0;background:#fff1f1;color:#a02d36;border-radius:8px;padding:11px 12px;font-size:12.5px;font-weight:700;margin-bottom:15px;}.card-footer{text-align:center;border-top:1px solid #eef2f5;padding-top:15px;font-size:10.5px;color:#9babb9;}
+@media(max-width:600px){.login-content{padding:44px 16px 42px;}h1{font-size:30px}.hero-description{font-size:12.5px}.login-card{padding:25px 22px}.eyebrow{font-size:9px;letter-spacing:1px}}
+
+.register-prompt{text-align:center;margin:1px 0 17px;color:#7890a1;font-size:12.5px;}
+.register-prompt a{color:#197eae;font-weight:800;text-decoration:none;}
+.register-prompt a:hover{text-decoration:underline;}
+.success-box{border:1px solid #b5dfce;background:#eaf8f1;color:#1d7c51;border-radius:9px;padding:11px 13px;font-size:12.5px;font-weight:700;margin-bottom:17px;}
