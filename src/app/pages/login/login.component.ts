@@ -23,6 +23,9 @@ export class LoginComponent {
   }
 
   async aceptar(): Promise<void> {
+
+    alert("Se procederá a validar las credenciales de acceso");
+    
     if (!this.usuario.trim() || !this.clave) {
       this.mensaje = 'Ingresa tu usuario y contraseña.';
       return;
